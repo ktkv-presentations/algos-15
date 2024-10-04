@@ -23,189 +23,461 @@
         <div class="reveal">
             <div class="slides">
                 <section>
-                    <h1>Beautiful presentations</h1>
-                    <h2>New features</h2>
-                    <ul>
-                        <li>Nerd icons </li>
-                        <li>
-                            <code class="js">
-                                (inline) => code("highlighting")
-                            </code>
-                        </li>
-                        <li>Automatic QR Code generation</li>
-                        <li>and much more!</li>
-                    </ul>
-                </section>
-                <section>
-                    <h1>CUSTOM TOKYONIGHT THEME</h1>
-                    <h2 class="fragment">THAT HAS</h2>
-                    <h3 class="fragment">MULTI</h3>
-                    <h4 class="fragment">LEVEL</h4>
-                    <h5 class="fragment">HEADING</h5>
-                    <h6 class="fragment">COLORS</h6>
-                    <h6>
-                        Thanks to this project
-                        <a
-                            href="https://github.com/tcmmichaelb139/obsidian-tokyonight">
-                            
-                        </a>
-                        for the colorscheme!
-                    </h6>
+                    <h1>Классы объектов</h1>
+                    <img
+                        data-type="qrcode"
+                        class="r-stretch"
+                        alt="https://ktkv-presentations.github.io/algos-15/" />
                 </section>
                 <section>
                     <section>
-                        <h1>Tailwind CSS</h1>
-                        <div class="grid grid-cols-2 gap-8">
-                            <div>
-                                <h5>Lorem, ipsum.</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Error quod fugiat harum
-                                    modi laboriosam dignissimos, maxime
-                                    possimus? Error, nihil in.
-                                </p>
-                            </div>
-                            <div>
-                                <h5>Lorem, ipsum.</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Error quod fugiat harum
-                                    modi laboriosam dignissimos, maxime
-                                    possimus? Error, nihil in.
-                                </p>
-                            </div>
-                            <div class="col-span-2">
-                                <h5>Lorem, ipsum.</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Error quod fugiat harum
-                                    modi laboriosam dignissimos, maxime
-                                    possimus? Error, nihil in.
-                                </p>
-                            </div>
-                        </div>
-                    </section>
-                    <section>
-                        <h1>Custom classes</h1>
-                        <div class="grid grid-cols-3 gap-8">
-                            <div class="border-r">
-                                <h5>border-r</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Illum, soluta!
-                                </p>
-                            </div>
-                            <div class="border-o">
-                                <h5>border-o</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Illum, soluta!
-                                </p>
-                            </div>
-                            <div class="border-y">
-                                <h5>border-y</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Illum, soluta!
-                                </p>
-                            </div>
-                        </div>
-                    </section>
-                </section>
-                <section>
-                    <section data-auto-animate>
-                        <h1>New code highlighting!</h1>
-                        <div>
-                            Now also has Tokyo Night
-                            <code>highlight.js</code>
-                            highlighting implementation
-                        </div>
-                        <pre><code data-trim data-noescape>
-var foo = {
-    bar: function () {
-             alert("Hello, World!");
-         }
-};	
-					</code></pre>
-                    </section>
-                    <section data-auto-animate>
-                        <h1>New code highlighting!</h1>
-                        <h5>Inline code highlighting is now also supported!</h5>
+                        <h1>Класс</h1>
                         <p>
-                            Just wrap your code with
-                            <code>&lt;code&gt;</code>
-                            tag and get highlighting like this
-                            <code class="js">
-                                const foo = () => {return bar}
-                            </code>
-                            !
+                            шаблон или чертеж для создания объектов, которые
+                            представляют сущности реального мира
+                        </p>
+                        <p>
+                            создаётся с помощью ключевого слова
+                            <code>class</code>
+                        </p>
+                        <pre><code class="python">
+class Car:
+    def __init__(self, color, model):
+        self.color = color
+        self.model = model
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h1>Зачем нужны классы</h1>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="border-b">
+                                <h4>Разделение ответственности</h4>
+                                <p>
+                                    Каждый класс может отвечать за конкретный
+                                    функционал, что облегчает поддержку и
+                                    модификацию кода
+                                </p>
+                            </div>
+                            <div class="border-b">
+                                <h4>Упрощение отладки</h4>
+                                <p>
+                                    Логика, сосредоточенная в классах, позволяет
+                                    легче идентифицировать и исправлять ошибки
+                                </p>
+                            </div>
+                            <div class="border-b col-span-2">
+                                <h4>Снижение дублирования кода</h4>
+                                <p>
+                                    Использование наследования и полиморфизма
+                                    позволяет избежать дублирования кода и
+                                    делает его более читаемым
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>Объект</h1>
+                        <p>
+                            конкретный экземпляр класса, который содержит
+                            специфические значения для атрибутов, определённых в
+                            классе
+                        </p>
+                        <pre><code class="python">
+class Car:
+    def __init__(self, color, model):
+        self.color = color
+        self.model = model
+        
+my_car = Car("red", "Ford Mustang")
+                    </code></pre>
+                        <p>
+                            <code>my_car</code>
+                            является объектом класса Car
                         </p>
                     </section>
                 </section>
                 <section>
-                    <h1>Mermaid for beautiful diagrams!</h1>
-                    <div class="mermaid">
-                        <pre>
-						erDiagram
-    CUSTOMER ||--o{ ORDER : ""
-    CUSTOMER {
-        string name
-        string custNumber
-        string sector
-    }
-    ORDER ||--|{ LINE-ITEM : contains
-    ORDER {
-        int orderNumber
-        string deliveryAddress
-    }
-    LINE-ITEM {
-        string productCode
-        int quantity
-        float pricePerUnit
-    }
-    ORDER ||--|{ STUDENT : contains
-    STUDENT {
-        int orderNumber
-        string deliveryAddress
-    }
-						</pre
-                        >
-                    </div>
-                    <h4>
-                        Check documentation
-                        <a href="https://mermaid.js.org/config/usage.html">
-                            here
-                        </a>
-                        !
-                    </h4>
+                    <section data-auto-animate>
+                        <h1>Атрибуты класса</h1>
+                        <p>
+                            переменные, которые хранят данные о состоянии
+                            объекта
+                        </p>
+                        <div class="border-r">
+                            Они могут быть определены как атрибуты экземпляра
+                            или атрибуты класса
+                        </div>
+                    </section>
+                    <section data-auto-animate>
+                        <h1>Атрибуты экземпляра</h1>
+                        <p>
+                            атрибуты уникальны для каждого объекта и
+                            определяются в методе __init__()
+                        </p>
+                        <pre><code class="python">
+class Car:
+    def __init__(self, color, model):
+        self.color = color  # Атрибут экземпляра
+        self.model = model  # Атрибут экземпляра
+        
+my_car = Car("red", "Ford Mustang")
+another_car = Car("blue", "Chevrolet Camaro")
+                        </code></pre>
+                        <p>
+                            <code>color</code>
+                            и
+                            <code>model</code>
+                            - атрибуты экземпляра
+                        </p>
+                    </section>
+                    <section data-auto-animate>
+                        <h1>Атрибуты класса</h1>
+                        <p>
+                            общие для всех экземпляров класса и могут быть
+                            определены вне методов
+                        </p>
+                        <pre><code class="python">
+class Car:
+    wheels = 4  # Атрибут класса
+
+    def __init__(self, color, model):
+        self.color = color
+        self.model = model
+        
+my_car = Car("red", "Ford Mustang")
+another_car = Car("blue", "Chevrolet Camaro")
+
+print(my_car.wheels)  # Вывод: 4
+print(another_car.wheels)  # Вывод: 4
+                        </code></pre>
+                        <p>
+                            <code>wheels</code>
+                            - атрибут класса
+                        </p>
+                    </section>
+                    <section data-auto-animate>
+                        <h1>Методы</h1>
+                        <p>
+                            функции, которые определены внутри класса и могут
+                            работать с атрибутами объекта или класса
+                        </p>
+                    </section>
+                    <section data-auto-animate>
+                        <h1>Методы атрибута</h1>
+                        <p>
+                            методы, которые могут обращаться к атрибутам
+                            экземпляра и изменять их
+                        </p>
+                        <pre><code class="python">
+class Car:
+    def __init__(self, color, model):
+        self.color = color
+        self.model = model
+        
+    def display_info(self):
+        print(f"Color: {self.color}, Model: {self.model}")
+        
+my_car = Car("red", "Ford Mustang")
+my_car.display_info()  # Вывод: Color: red, Model: Ford Mustang
+                        </code></pre>
+                    </section>
+                    <section data-auto-animate>
+                        <h1>Методы класса</h1>
+                        <p>
+                            методы, которые работают с атрибутами класса и могут
+                            изменять состояние класса
+                        </p>
+                        <pre><code class="python">
+class Car:
+    wheels = 4  # Атрибут класса
+
+    @classmethod
+    def get_wheels(cls):
+        return cls.wheels
+        
+print(Car.get_wheels())  # Вывод: 4
+                        </code></pre>
+                        <p>
+                            определяются с помощью декоратора
+                            <code>@classmethod</code>
+                        </p>
+                    </section>
+                    <section data-auto-animate>
+                        <h1>Статические методы</h1>
+                        <p>не зависят от состояния объекта или класса</p>
+                        <pre><code class="python">
+class Car:
+    @staticmethod
+    def is_motorized():
+        return True
+        
+print(Car.is_motorized())  # Вывод: True
+                        </code></pre>
+                        <p>
+                            определяются с помощью декоратора
+                            <code>@staticmethod</code>
+                        </p>
+                    </section>
                 </section>
                 <section>
-                    <h1>Now supports Nerd font icons!</h1>
-                    <div>Nerdy project that adds icons to font itself</div>
-                    <h6>
-                        Checkout their site for icons like this
-                        <a href="https://www.nerdfonts.com/">󰖟</a>
-                        !
-                    </h6>
+                    <section>
+                        <h1>Наследование классов</h1>
+                        <p>
+                            механизм, позволяющий создавать новый класс на
+                            основе существующего, наследуя его атрибуты и методы
+                        </p>
+                        <pre><code class="python">
+class Vehicle:  # Родительский класс
+    def __init__(self, color):
+        self.color = color
+        
+    def start(self):
+        print("Vehicle is starting.")
+
+class Car(Vehicle):  # Порожденный класс
+    def __init__(self, color, model):
+        super().__init__(color)  # Вызов конструктора родительского класса
+        self.model = model
+
+    def start(self):
+        super().start()  # Вызов метода родительского класса
+        print(f"The {self.color} {self.model} car is starting.")
+
+my_car = Car("red", "Ford Mustang")
+my_car.start()  
+# Вывод:
+# Vehicle is starting.
+# The red Ford Mustang car is starting.
+                        </code></pre>
+                    </section>
+                    <section>
+                        <p>
+                            класс, который наследует другой класс, называется
+                            <code>потомком (порожденным классом)</code>
+                            , а класс, от которого происходит наследование,
+                            называется
+                            <code>родительским классом</code>
+                        </p>
+                    </section>
+                    <section>
+                        <h1>Переопределение методов</h1>
+                        <p>
+                            возможность в дочернем классе предоставлять свою
+                            реализацию методов, которые уже определены в
+                            родительском классе
+                        </p>
+                        <pre><code class="python">
+class Vehicle:  
+    def start(self):
+        print("Vehicle is starting.")
+
+class Car(Vehicle):  
+    def start(self):  # Переопределение метода
+        print("Car is starting.")
+
+my_car = Car()
+my_car.start()  
+# Вывод: Car is starting.
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h1>Множественное наследование</h1>
+                        <p>
+                            возможность создавать класс на основе более чем
+                            одного родительского класса
+                        </p>
+                        <pre><code class="python">
+class Engine:
+    def start_engine(self):
+        print("Engine started.")
+
+class Radio:
+    def turn_on_radio(self):
+        print("Radio turned on.")
+
+class Car(Engine, Radio):  # Множественное наследование
+    def drive(self):
+        print("Car is driving.")
+
+my_car = Car()
+my_car.start_engine()  # Вывод: Engine started.
+my_car.turn_on_radio()  # Вывод: Radio turned on.
+my_car.drive()          # Вывод: Car is driving.
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h1>Спецификаторы доступа</h1>
+                        <p>
+                            позволяют контролировать, как и где можно обращаться
+                            к атрибутам и методам класса
+                        </p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="border-b">
+                                <h4>Публичные</h4>
+                                <p>
+                                    Не имеют никаких специальных символов и
+                                    доступны из любого места
+                                </p>
+                            </div>
+                            <div class="border-b">
+                                <h4>Приватные</h4>
+                                <p>
+                                    не могут быть доступны напрямую за пределами
+                                    класса. Для обозначения используется два
+                                    символа
+                                    <code>_</code>
+                                </p>
+                                <code class="python">self.__engine = "V8"</code>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h1>Пример спецификаторов</h1>
+                        <pre><code class="python">
+class Car:
+    def __init__(self):
+        self.__engine = "V8"  # Приватный атрибут
+
+    def __start_engine(self):  # Приватный метод
+        print("Engine started.")
+
+    def start(self):
+        self.__start_engine()  # Доступ к приватному методу внутри класса
+
+my_car = Car()
+my_car.start()  
+# Вывод: Engine started.
+                        </code></pre>
+                    </section>
+                </section>
+                <section data-auto-animate>
+                    <section>
+                        <div>
+                            <h1>
+                                конструктор
+                                <code>__init__</code>
+                            </h1>
+                        </div>
+                        <p>
+                            специальный метод, который автоматически вызывается
+                            при создании нового экземпляра класса
+                        </p>
+                        <pre><code class="python">
+class ClassName:
+    def __init__(self, parameters):
+        # Инициализация атрибутов объекта
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h1>Определение конструктора</h1>
+                        <p>
+                            Метод
+                            <code>__init__</code>
+                            определяется внутри класса
+                        </p>
+                        <pre><code class="python">
+class ClassName:
+    def __init__(self, parameters):
+        # Инициализация атрибутов объекта
+                        </code></pre>
+                        <p>
+                            <code>self</code>
+                            : первый параметр метода
+                            <code>__init__</code>
+                            всегда должен быть
+                            <code>self</code>
+                            , который ссылается на создаваемый объект
+                        </p>
+                        <p>
+                            <code>parameters</code>
+                            : дополнительные параметры, которые могут быть
+                            переданы в конструктор, позволяющие задавать
+                            начальные значения атрибутов
+                        </p>
+                    </section>
+                    <section>
+                        <h1>
+                            Пример использования конструктора
+                            <code>__init__</code>
+                        </h1>
+                        <pre><code class="python">
+class Person:
+    def __init__(self, name, age):
+        self.name = name  # Инициализация атрибута name
+        self.age = age    # Инициализация атрибута age
+
+    def greet(self):
+        print(f"Привет, меня зовут {self.name} и мне {self.age} лет.")
+
+# Создание экземпляров класса Person
+person1 = Person("Alice", 30)
+person2 = Person("Bob", 25)
+
+# Вызов метода greet
+person1.greet()  # Вывод: Привет, меня зовут Alice и мне 30 лет.
+person2.greet()  # Вывод: Привет, меня зовут Bob и мне 25 лет.
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h1>
+                            Особенности конструктора
+                            <code>__init__</code>
+                        </h1>
+                        <h4>Необязательные параметры</h4>
+                        <p>
+                            Конструктор может принимать необязательные параметры
+                            с заданием значений по умолчанию
+                        </p>
+                        <pre><code class="python">
+class Person:
+    def __init__(self, name, age=0):  # age по умолчанию 0
+        self.name = name
+        self.age = age
+
+person3 = Person("Charlie")  # age будет 0
+print(person3.age)  # Вывод: 0
+                        </code></pre>
+                    </section>
                 </section>
                 <section>
-                    <h1>Now supports automatic QRCode generation!</h1>
-                    <div>
-                        With GoQR you can just add data-type and alt attributes
-                        to your
-                        <code class="html">
-                            &lt;img alt="https://goqr.me/" data-type="qrcode" /
-                            &gt;
-                        </code>
-                        tag!
-                    </div>
-                    <img
-                        class="r-stretch"
-                        alt="https://goqr.me/"
-                        data-type="qrcode" />
-                </section>
-                <section>
-                    <h1>New changes on the way!</h1>
+                    <section>
+                        <h1>Функция <code>super()</code></h1>
+                        <p>встроенная функция в Python, которая используется для вызова методов родительского (или базового) класса из дочернего (или производного) класса</p>
+                        <pre><code class="python">
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+class Dog(Animal):
+    def __init__(self, name, breed):
+        super().__init__(name)  # Вызов конструктора родительского класса
+                        </code></pre>
+                    </section>
+                    <section>
+                        <pre><code class="python">
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+class Dog(Animal):
+    def __init__(self, name, breed):
+        super().__init__(name)  # Вызов конструктора родительского класса
+        self.breed = breed
+
+    def speak(self):
+        return "Woof!"
+
+# Создание экземпляра класса Dog
+dog = Dog("Buddy", "Golden Retriever")
+
+# Вызов методов
+print(dog.name)   # Вывод: Buddy
+print(dog.breed)  # Вывод: Golden Retriever
+print(dog.speak())  # Вывод: Woof!
+                        </code></pre>
+                    </section>
                 </section>
             </div>
         </div>
@@ -396,4 +668,3 @@ var foo = {
         </script>
     </body>
 </html>
-
